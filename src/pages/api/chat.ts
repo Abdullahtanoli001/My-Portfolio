@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
+import axios from "axios";
 import { AI_MODEL, SYSTEM_PROMPT, SUGGESTION_SYSTEM_PROMPT } from "@/config/ai";
 import { rateLimiterApi, getUserId } from "@/utility/rate-limiter";
 import { initializeAllTools } from "@/lib/tools";
@@ -28,10 +28,22 @@ interface ChatResponse {
   suggestions?: string[];
 }
 
-const openai = new OpenAI({
-  apiKey: process.env.LLM_API_KEY,
-  baseURL: process.env.LLM_BASE_URL,
-});
+interface ChatCompletionMessageToolCall {
+  id: string;
+  type: "function";
+  function: {
+    name: string;
+    arguments: string;
+  };
+}
+
+interface ChatCompletionMessageParam {
+  role: "system" | "user" | "assistant" | "tool";
+  content?: string | null;
+  tool_calls?: ChatCompletionMessageToolCall[];
+  tool_call_id?: string;
+  name?: string;
+}
 
 // Rate limiter: max 40 requests per minute per user (IP+UA or fallback cookie)
 const chatRateLimiter = rateLimiterApi({
@@ -60,7 +72,7 @@ async function ensureToolsInitialized(): Promise<void> {
  * Execute tool calls from OpenAI function calling
  */
 async function executeToolCalls(
-  toolCalls: OpenAI.Chat.Completions.ChatCompletionMessageToolCall[],
+  toolCalls: ChatCompletionMessageToolCall[],
   context: ToolContext
 ): Promise<{ results: ToolResult[]; toolCallResults: ToolCall[] }> {
   const results: ToolResult[] = [];
@@ -235,7 +247,7 @@ export default async function handler(
     const recentMessages = conversationHistory.slice(-10);
 
     // Format conversation history for OpenAI API
-    const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
+    const messages: ChatCompletionMessageParam[] = [
       { role: "system", content: SYSTEM_PROMPT },
     ];
 
@@ -258,23 +270,34 @@ export default async function handler(
       `Making OpenAI request with ${functionDefinitions.length} available tools`
     );
 
-    const response = await openai.chat.completions.create({
-      model: AI_MODEL,
-      messages,
-      tools: functionDefinitions.map((func) => ({
-        type: "function" as const,
-        function: {
-          name: func.name,
-          description: func.description,
-          parameters: func.parameters as Record<string, unknown>,
-        },
-      })),
-      tool_choice: "auto",
-      top_p: 0.7,
-      temperature: 0.8,
-    });
+    const invokeUrl = process.env.LLM_BASE_URL ? `${process.env.LLM_BASE_URL}/chat/completions` : "https://integrate.api.nvidia.com/v1/chat/completions";
+    const headers = {
+      "Authorization": `Bearer ${process.env.LLM_API_KEY}`,
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    };
 
-    const choice = response.choices[0];
+    const response = await axios.post(
+      invokeUrl,
+      {
+        model: AI_MODEL,
+        messages,
+        tools: functionDefinitions.map((func) => ({
+          type: "function" as const,
+          function: {
+            name: func.name,
+            description: func.description,
+            parameters: func.parameters as Record<string, unknown>,
+          },
+        })),
+        tool_choice: "auto",
+        top_p: 0.7,
+        temperature: 0.8,
+      },
+      { headers }
+    );
+
+    const choice = response.data.choices[0];
     if (!choice) {
       throw new Error("No response from OpenAI");
     }
@@ -298,7 +321,7 @@ export default async function handler(
 
       if (toolResultsMessage) {
         // Make a follow-up call to get a natural response incorporating tool results
-        const followUpMessages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] =
+        const followUpMessages: ChatCompletionMessageParam[] =
           [
             ...messages,
             {
@@ -306,22 +329,26 @@ export default async function handler(
               content: aiResponse || "I'll help you with that.",
               tool_calls: choice.message.tool_calls,
             },
-            ...choice.message.tool_calls.map((toolCall, index) => ({
+            ...choice.message.tool_calls.map((toolCall: any, index: number) => ({
               role: "tool" as const,
               tool_call_id: toolCall.id,
               content: JSON.stringify(toolCallResults[index]?.result || {}),
             })),
           ];
 
-        const followUpResponse = await openai.chat.completions.create({
-          model: AI_MODEL,
-          messages: followUpMessages,
-          top_p: 0.7,
-          temperature: 0.8,
-        });
+        const followUpResponse = await axios.post(
+          invokeUrl,
+          {
+            model: AI_MODEL,
+            messages: followUpMessages,
+            top_p: 0.7,
+            temperature: 0.8,
+          },
+          { headers }
+        );
 
         aiResponse =
-          followUpResponse.choices[0]?.message?.content || aiResponse;
+          followUpResponse.data.choices[0]?.message?.content || aiResponse;
       }
     }
 
@@ -362,7 +389,7 @@ export default async function handler(
           (c) => !usedCategories.includes(c)
         );
 
-        const suggestionMessages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] =
+        const suggestionMessages: ChatCompletionMessageParam[] =
           [
             { role: "system", content: suggestionPromptSystem },
             // Provide compressed conversation context for relevance
@@ -381,14 +408,18 @@ export default async function handler(
             },
           ];
 
-        const suggestionResp = await openai.chat.completions.create({
-          model: AI_MODEL,
-          messages: suggestionMessages,
-          temperature: 0.7,
-          top_p: 0.9,
-        });
+        const suggestionResp = await axios.post(
+          invokeUrl,
+          {
+            model: AI_MODEL,
+            messages: suggestionMessages,
+            temperature: 0.7,
+            top_p: 0.9,
+          },
+          { headers }
+        );
 
-        let raw = suggestionResp.choices[0]?.message?.content?.trim() || "[]";
+        let raw = suggestionResp.data.choices[0]?.message?.content?.trim() || "[]";
         // Strip markdown fences if any
         raw = raw
           .replace(/^```(?:json)?/i, "")
