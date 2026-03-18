@@ -95,14 +95,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     technologies: ["React", "TypeScript", "Supabase", "Gemini AI", "Vercel"],
   },
   {
-    name: "Codenex Images UI",
+    name: "Codenex Images",
     imageUrl: [
       "/images/projects/codenex-images/login-page-dark.png",
       "/images/projects/codenex-images/generation-workspace-dark.png",
     ],
     description:
-      "AI-powered image generation and editing frontend built with React, Vite, and Tailwind CSS. Lets users generate and edit images using Google Gemini models, with Auth0 authentication and deployment on Vercel.",
-    sourceCodeHref: "https://github.com/Nikunj2003/codenex-images-ui",
+      "AI-powered image generation and editing frontend and backend built with React, Vite, Nodejs, and Tailwind CSS. Lets users generate and edit images using Google Gemini models, with Auth0 authentication and deployment on Vercel.",
+    sourceCodeHref: "https://github.com/Nikunj2003/codenex-images",
     liveWebsiteHref: "",
     category: "AI Product",
     technologies: [
@@ -112,6 +112,9 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "Tailwind CSS",
       "Auth0",
       "Gemini AI",
+      "Nodejs",
+      "Expressjs",
+      "MongoDB",
     ],
   },
   {
