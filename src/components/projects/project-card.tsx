@@ -31,10 +31,10 @@ export default function ProjectCard(props: ProjectCardProps) {
   if (!animationsReady) {
     return (
       <div
-        className={`w-full overflow-hidden rounded-lg border border-accent/20 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 ${backgroundColor}`}
+        className={`w-full h-full flex flex-col overflow-hidden rounded-lg border border-accent/20 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 ${backgroundColor}`}
       >
         <Corosel images={props.imageUrl} aspectRatio={1.9} />
-        <div className="p-4 text-foreground sm:p-6">
+        <div className="p-4 text-foreground sm:p-6 flex flex-col grow">
           <div className="flex items-center gap-3">
             {props.favicon && (
               <span className="relative h-6 w-6 text-2xl">{props.favicon}</span>
@@ -56,7 +56,7 @@ export default function ProjectCard(props: ProjectCardProps) {
               </span>
             ))}
           </div>
-          <div className="mt-6 flex items-center justify-end gap-6">
+          <div className="mt-auto pt-6 flex items-center justify-end gap-6">
             {props?.sourceCodeHref && (
               <a
                 href={props.sourceCodeHref}
@@ -91,10 +91,10 @@ export default function ProjectCard(props: ProjectCardProps) {
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ ease: "easeOut", duration: 0.4 }}
-      className={`w-full overflow-hidden rounded-lg border border-accent/20 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 ${backgroundColor}`}
+      className={`w-full h-full flex flex-col overflow-hidden rounded-lg border border-accent/20 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 ${backgroundColor}`}
     >
       <Corosel images={props.imageUrl} aspectRatio={1.9} />
-      <div className="p-4 text-foreground sm:p-6">
+      <div className="p-4 text-foreground sm:p-6 flex flex-col grow">
         <div className="flex items-center gap-3">
           {props.favicon && (
             <span className="relative h-6 w-6 text-2xl">{props.favicon}</span>
@@ -116,7 +116,7 @@ export default function ProjectCard(props: ProjectCardProps) {
             </span>
           ))}
         </div>
-        <div className="mt-6 flex items-center justify-end gap-6">
+        <div className="mt-auto pt-6 flex items-center justify-end gap-6">
           {props?.sourceCodeHref && (
             <a
               href={props.sourceCodeHref}
