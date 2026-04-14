@@ -25,3 +25,6 @@ function SkillPillComponent(props: SkillPillProps) {
 }
 
 export default memo(SkillPillComponent);
+
+
+

@@ -45,7 +45,7 @@ export default function CursorTrailCanvas(props: CursorTrailCanvasProps) {
 import { RefObject } from "react";
 
 export type CursorTrail = {
-  ref: RefObject<HTMLCanvasElement>;
+  ref: RefObject<HTMLCanvasElement | null>;
   color?: string;
 };
 
@@ -258,3 +258,6 @@ export function cursorTrail(props: CursorTrail) {
 
   return { renderTrailCursor, cleanUp };
 }
+
+
+

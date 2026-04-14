@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import { useAnimationGate } from "@/contexts/animation-gate";
 
 import { ArrowTopRight } from "@/components/icons";
@@ -216,3 +217,6 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
     </section>
   );
 }
+
+
+

@@ -8,10 +8,10 @@ import {
   SiPandas,
   SiScikitlearn,
   SiMlflow,
-  SiN8N,
   SiOpenai,
   SiPlotly,
 } from "react-icons/si";
+import { Workflow } from "lucide-react";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 import PythonSvg from "@/public/icons/python.svg";
 import FastSvg from "@/public/icons/fastapi.svg";
@@ -94,7 +94,7 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       },
       {
         name: "n8n",
-        icon: SiN8N,
+        icon: Workflow,
       },
     ],
   },

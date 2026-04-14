@@ -3,10 +3,11 @@ import { useState } from "react";
 import {
   AnimatePresence,
   AnimationProps,
-  motion,
+  motion as _motion,
   wrap,
   useReducedMotion,
 } from "framer-motion";
+const motion = _motion as any;
 import { BiSolidLeftArrow } from "react-icons/bi";
 
 import { classNames } from "@/utility/classNames";
@@ -80,7 +81,8 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
+          onDragEnd={(e: any, info: any) => {
+            const { offset, velocity } = info;
             if (prefersReducedMotion) return;
             const swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
@@ -119,3 +121,6 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
     </div>
   );
 }
+
+
+

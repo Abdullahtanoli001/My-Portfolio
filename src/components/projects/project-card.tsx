@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import { FiExternalLink } from "react-icons/fi";
 import { useTheme } from "next-themes";
 
@@ -144,3 +145,6 @@ export default function ProjectCard(props: ProjectCardProps) {
     </motion.div>
   );
 }
+
+
+

@@ -50,3 +50,6 @@ export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
     </section>
   );
 }
+
+
+

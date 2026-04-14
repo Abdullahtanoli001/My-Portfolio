@@ -7,7 +7,7 @@ interface AutosizeOptions {
 }
 
 export function useAutosizeTextArea(
-  ref: RefObject<HTMLTextAreaElement>,
+  ref: RefObject<HTMLTextAreaElement | null>,
   value: string,
   defaultHeight: string = "auto",
   options: AutosizeOptions = {}

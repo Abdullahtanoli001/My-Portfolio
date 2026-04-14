@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import { motion } from "framer-motion";
+import { motion as _motion } from "framer-motion";
+const motion = _motion as any;
 
 import { classNames } from "@/utility/classNames";
 
@@ -70,3 +71,6 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
     </motion.div>
   );
 }
+
+
+

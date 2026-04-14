@@ -119,3 +119,6 @@ describe("Contact modal behavior", () => {
     expect(screen.getByText("Send Message")).toBeInTheDocument();
   });
 });
+
+
+

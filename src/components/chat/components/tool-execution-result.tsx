@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as _motion, AnimatePresence } from "framer-motion";
+const motion = _motion as any;
 import {
   CheckCircle,
   XCircle,
@@ -220,3 +221,6 @@ export function ToolExecutionResult({ toolCall }: { toolCall: ToolCall }) {
     </motion.div>
   );
 }
+
+
+

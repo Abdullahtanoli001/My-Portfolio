@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Send, User, Bot, X, Trash2, Maximize, Minimize } from "lucide-react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion as _motion, AnimatePresence, useReducedMotion } from "framer-motion";
+const motion = _motion as any;
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useTheme } from "next-themes";
@@ -1180,3 +1181,6 @@ export default function ChatWindow({
     </>
   );
 }
+
+
+

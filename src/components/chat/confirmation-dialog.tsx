@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as _motion, AnimatePresence } from "framer-motion";
+const motion = _motion as any;
 import { AlertTriangle, X } from "lucide-react";
 import { classNames } from "@/utility/classNames";
 
@@ -78,7 +79,7 @@ export default function ConfirmationDialog({
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: any) => e.stopPropagation()}
             >
               {/* Close Button */}
               <motion.button
@@ -232,3 +233,6 @@ export function useConfirmationDialog() {
     ConfirmationDialog: ConfirmationDialogComponent,
   };
 }
+
+
+

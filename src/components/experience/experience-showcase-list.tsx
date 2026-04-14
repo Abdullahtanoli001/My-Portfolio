@@ -1,6 +1,7 @@
 import { useRef } from "react";
 
-import { motion, useScroll } from "framer-motion";
+import { motion as _motion, useScroll } from "framer-motion";
+const motion = _motion as any;
 
 import ExperienceShowcaseListItem, {
   type ExperienceShowcaseListItemProps,
@@ -15,7 +16,7 @@ export interface ExperienceShowcaseListProps {
 export default function ExperienceShowcaseList(
   props: ExperienceShowcaseListProps
 ) {
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
@@ -48,3 +49,7 @@ export default function ExperienceShowcaseList(
     </div>
   );
 }
+
+
+
+

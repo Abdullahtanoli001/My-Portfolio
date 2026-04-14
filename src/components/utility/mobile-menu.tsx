@@ -1,7 +1,8 @@
 import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import { Dialog, Transition } from "@headlessui/react";
 
 import ThemeSwitch from "@/components/utility/theme-switch";
@@ -156,3 +157,6 @@ export default function MobileMenu({
     </Transition>
   );
 }
+
+
+

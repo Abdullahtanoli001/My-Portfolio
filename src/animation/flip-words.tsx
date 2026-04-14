@@ -38,13 +38,16 @@ export const FlipWords = ({
     }
   }, [isAnimating, duration, startAnimation, isVisible]);
 
+  const MotionDiv = motion.div as any;
+  const MotionSpan = motion.span as any;
+
   return (
     <AnimatePresence
       onExitComplete={() => {
         setIsAnimating(false);
       }}
     >
-      <motion.div
+      <MotionDiv
         initial={{
           opacity: 0,
           y: 10,
@@ -73,7 +76,7 @@ export const FlipWords = ({
         key={currentWord}
       >
         {currentWord.split("").map((letter, index) => (
-          <motion.span
+          <MotionSpan
             key={currentWord + index}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -84,9 +87,10 @@ export const FlipWords = ({
             className="inline-block"
           >
             {letter}
-          </motion.span>
+          </MotionSpan>
         ))}
-      </motion.div>
+      </MotionDiv>
     </AnimatePresence>
   );
 };
+

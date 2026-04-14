@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
+import { motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import Link from "next/link";
 import {
   Mail,
@@ -489,3 +490,6 @@ export default function ResumeDisplay({ className = "" }: ResumeDisplayProps) {
     </motion.div>
   );
 }
+
+
+

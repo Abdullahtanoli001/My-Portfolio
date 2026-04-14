@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import { useTheme } from "next-themes";
 
 import FadeUp from "@/animation/fade-up";
@@ -194,3 +195,6 @@ export default function LandingHero() {
     </>
   );
 }
+
+
+

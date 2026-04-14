@@ -1,4 +1,5 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as _motion, useReducedMotion } from "framer-motion";
+const motion = _motion as any;
 import { Sparkles } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -166,3 +167,6 @@ export default function PageTransitionAnimation() {
     </>
   );
 }
+
+
+

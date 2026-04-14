@@ -1,5 +1,6 @@
 import { MessageCircle, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as _motion, AnimatePresence } from "framer-motion";
+const motion = _motion as any;
 import { classNames } from "@/utility/classNames";
 import { useChatContext } from "@/contexts/chat-context";
 import ChatWindow from "./chat-window";
@@ -123,3 +124,6 @@ export default function FloatingChatButton() {
     </>
   );
 }
+
+
+

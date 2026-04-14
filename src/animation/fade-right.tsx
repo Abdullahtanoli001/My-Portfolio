@@ -26,10 +26,10 @@ export default function FadeRight({
     x: 0,
     transition: {
       duration,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       delay,
     },
-  } as const;
+  };
 
   const initial = prefersReducedMotion
     ? { opacity: 0 }
@@ -45,8 +45,9 @@ export default function FadeRight({
     );
   }
 
+  const MotionDiv = motion.div as any;
   return (
-    <motion.div
+    <MotionDiv
       key="ready"
       initial={initial}
       whileInView={whileInView ? animate : {}}
@@ -55,6 +56,7 @@ export default function FadeRight({
       className={className}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
+

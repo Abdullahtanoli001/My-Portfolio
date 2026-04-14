@@ -8,6 +8,7 @@ export interface FadeUpProps {
   duration: number;
   delay?: number;
   whileInView?: boolean;
+  className?: string;
 }
 
 export default function FadeUp({
@@ -15,6 +16,7 @@ export default function FadeUp({
   duration,
   delay,
   whileInView = false,
+  className,
 }: FadeUpProps) {
   const prefersReducedMotion = useReducedMotion();
   const { animationsReady } = useAnimationGate();
@@ -23,28 +25,35 @@ export default function FadeUp({
     y: 0,
     transition: {
       duration,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       delay,
     },
-  } as const;
+  };
 
   const initial = prefersReducedMotion ? { opacity: 0 } : { y: 40, opacity: 0 };
   const animate = prefersReducedMotion ? { opacity: 1 } : animation;
 
   // Avoid triggering any Framer Motion lifecycle before the global gate opens.
   if (!animationsReady) {
-    return <div key="not-ready">{children}</div>;
+    return (
+      <div className={className} key="not-ready">
+        {children}
+      </div>
+    );
   }
 
+  const MotionDiv = motion.div as any;
   return (
-    <motion.div
+    <MotionDiv
       key="ready"
       initial={initial}
       whileInView={whileInView ? animate : {}}
       animate={!whileInView ? animate : {}}
       viewport={{ once: true, amount: 0.25 }}
+      className={className}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
+

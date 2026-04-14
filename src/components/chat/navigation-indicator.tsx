@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as _motion, AnimatePresence } from "framer-motion";
+const motion = _motion as any;
 import {
   Navigation,
   Download,
@@ -309,3 +310,6 @@ export function useNavigationActions() {
     clearCompletedActions,
   };
 }
+
+
+

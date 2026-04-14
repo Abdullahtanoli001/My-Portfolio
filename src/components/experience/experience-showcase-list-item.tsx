@@ -1,10 +1,11 @@
 import { RefObject, useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, useScroll } from "framer-motion";
+import { motion as _motion, useScroll } from "framer-motion";
+const motion = _motion as any;
 import { useTheme } from "next-themes";
 
 export interface ExperienceListIconProps {
-  iconRef: RefObject<HTMLElement>;
+  iconRef: RefObject<any>;
 }
 
 function ShowCaseLiIcon(props: ExperienceListIconProps) {
@@ -50,7 +51,7 @@ export interface ExperienceShowcaseListItemProps {
 export default function ExperienceShowcaseListItem(
   props: ExperienceShowcaseListItemProps
 ) {
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -98,3 +99,7 @@ export default function ExperienceShowcaseListItem(
     </li>
   );
 }
+
+
+
+

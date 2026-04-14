@@ -5,7 +5,8 @@ import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import { DefaultSeo } from "next-seo";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import MainLayout from "@/layout/main-layout";
 import {
   AnimationGateProvider,
@@ -155,3 +156,4 @@ function AppContent({ Component, pageProps }: AppProps) {
     </>
   );
 }
+

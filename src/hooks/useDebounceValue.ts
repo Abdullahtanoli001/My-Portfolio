@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export function useDebounceValue<T>(value: T, wait: number) {
   const [_value, setValue] = useState<T>(value);
   const refMounted = useRef<boolean>(false);
-  const refTimeout = useRef<number | undefined>();
+  const refTimeout = useRef<number | undefined>(undefined);
 
   const cancel = () => window.clearTimeout(refTimeout.current);
 

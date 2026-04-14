@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion as _motion } from "framer-motion";
+const motion = _motion as any;
 import { Navigation, Download, Palette, ExternalLink, Bot } from "lucide-react";
 import { ToolAction } from "@/types/tools";
 
@@ -38,3 +39,6 @@ export function ActionIndicator({ action }: { action: ToolAction }) {
     </motion.div>
   );
 }
+
+
+
