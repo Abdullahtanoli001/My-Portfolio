@@ -93,7 +93,7 @@ describe("ChatWindow Enhanced Features", () => {
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
     // Send a message to trigger tool execution
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, { target: { value: "Show me projects" } });
@@ -136,7 +136,7 @@ describe("ChatWindow Enhanced Features", () => {
 
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, { target: { value: "Download resume" } });
@@ -171,7 +171,7 @@ describe("ChatWindow Enhanced Features", () => {
 
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, { target: { value: "Test message" } });
@@ -221,7 +221,7 @@ describe("ChatWindow Enhanced Features", () => {
 
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, {
@@ -265,7 +265,7 @@ describe("ChatWindow Enhanced Features", () => {
 
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, { target: { value: "Show web projects" } });
@@ -283,7 +283,7 @@ describe("ChatWindow Enhanced Features", () => {
 
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, { target: { value: "Test message" } });
@@ -311,7 +311,7 @@ describe("ChatWindow Enhanced Features", () => {
 
     render(<ChatWindow isOpen={true} onClose={mockOnClose} />);
 
-    const input = screen.getByPlaceholderText(/Ask about Nikunj's experience/);
+    const input = screen.getByPlaceholderText(/Ask about Abdullah Khan's experience/);
     const sendButton = screen.getByLabelText("Send message");
 
     fireEvent.change(input, { target: { value: "Test message" } });

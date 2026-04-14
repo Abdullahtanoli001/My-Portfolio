@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
-import heroProfileImg from "@/public/images/heroProfile.png";
+import heroProfileImg from "../../public/images/heroProfile.png";
 
 export default function AboutHero() {
   return (
@@ -22,7 +22,7 @@ export default function AboutHero() {
                   width={800}
                   height={800}
                   className="h-auto w-full rounded-xl border border-accent/10 px-0 xl:px-16"
-                  alt="Portrait of Nikunj Khitha"
+                  alt="Portrait of Abdullah Khan"
                   priority={false}
                 />
               </FadeUp>
@@ -32,26 +32,32 @@ export default function AboutHero() {
             <AnimatePresence>
               <FadeUp key="title-greeting" duration={0.6}>
                 <h1 className="bg-gradient-to-r from-accent via-accent-light to-accent bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-5xl lg:text-4xl xl:text-6xl">
-                  Hi, I&apos;m Nikunj Khitha
+                  Hi, I&apos;m Abdullah Khan
                 </h1>
               </FadeUp>
-              <FadeUp key="description-1" duration={0.6} delay={0.2}>
+              <FadeUp key="bio-1" duration={0.6} delay={0.2}>
                 <p className="mx-auto mt-6 max-w-3xl text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg">
-                  I&apos;m a software engineer passionate about building
-                  intelligent, end-to-end solutions at the intersection of AI
-                  and automation. My experience ranges from developing
-                  enterprise-grade testing frameworks with Spring Boot to
-                  engineering sophisticated AI agents using AWS Bedrock, Azure
-                  AI, and Crew AI.
+                  I am an AI/ML Engineer focused on building intelligent systems that solve real-world problems. My work revolves around developing AI agents, automation tools, and data-driven applications, especially in the e-commerce and SaaS domain.
                 </p>
               </FadeUp>
-              <FadeUp key="description-2" duration={0.6} delay={0.35}>
+              <FadeUp key="bio-2" duration={0.6} delay={0.3}>
                 <p className="mx-auto mt-4 max-w-3xl text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg">
-                  Explore my portfolio to see how I apply my expertise. From
-                  creating AI-powered chatbots with Node.js and FastAPI to
-                  implementing robust CI/CD pipelines and developing resilient
-                  mobile apps with Flutter, I am dedicated to delivering
-                  high-impact, production-ready code.
+                  I specialize in creating agent-based architectures using modern frameworks like LangChain and LangGraph, enabling systems to reason, interact, and make decisions autonomously. From AI-powered chatbots to conversion optimization agents, I aim to build solutions that are not just functional, but impactful.
+                </p>
+              </FadeUp>
+              <FadeUp key="bio-3" duration={0.6} delay={0.4}>
+                <p className="mx-auto mt-4 max-w-3xl text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg">
+                  My technical stack includes Python, FastAPI, and modern web technologies like Next.js, along with strong experience in data processing, model integration, and MLOps workflows. I also work with tools like Docker, MLflow, and vector databases to build scalable and production-ready AI systems.
+                </p>
+              </FadeUp>
+              <FadeUp key="bio-4" duration={0.6} delay={0.5}>
+                <p className="mx-auto mt-4 max-w-3xl text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg">
+                  I am passionate about exploring the future of AI, particularly in automation, multi-agent systems, and intelligent decision-making. I continuously experiment, build, and refine my skills to stay at the cutting edge of technology.
+                </p>
+              </FadeUp>
+              <FadeUp key="bio-5" duration={0.6} delay={0.6}>
+                <p className="mx-auto mt-4 max-w-3xl text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg font-semibold text-accent">
+                  Currently, I am focused on building AI-driven products that bridge the gap between machine intelligence and real-world business needs.
                 </p>
               </FadeUp>
 
@@ -59,9 +65,9 @@ export default function AboutHero() {
               <FadeUp key="highlights" duration={0.6} delay={0.5}>
                 <div className="mx-auto mt-6 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
                   {[
-                    { label: "AI & Automation" },
-                    { label: "Full Stack Engineering" },
-                    { label: "DevOps & Cloud" },
+                    { label: "AI / ML" },
+                    { label: "Data Science" },
+                    { label: "Backend & MLOps" },
                   ].map((h) => (
                     <div
                       key={h.label}
@@ -83,7 +89,7 @@ export default function AboutHero() {
                     View Projects
                   </Link>
                   <a
-                    href="mailto:njkhitha2003@gmail.com"
+                    href="mailto:abuk10977@gmail.com"
                     className="rounded-full border-2 border-accent bg-accent/10 px-6 py-3 text-center text-sm font-semibold text-accent backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] hover:bg-accent hover:text-white active:scale-95 sm:text-base"
                   >
                     Contact Me
@@ -98,16 +104,10 @@ export default function AboutHero() {
                 className="mr-0 mt-8 flex items-center justify-center gap-4 lg:mr-8 lg:justify-end"
               >
                 <div className="relative flex w-12 gap-4 overflow-hidden rounded-md">
-                  <Image
-                    className="-z-10 h-full w-full bg-cover bg-no-repeat"
-                    alt="Indian flag"
-                    src="https://flagcdn.com/in.svg"
-                    width={20}
-                    height={14}
-                  />
+                  {/* Local flag or icon placeholder */}
                 </div>
                 <span className="text-lg font-medium text-foreground">
-                  India
+                  Global / Remote
                 </span>
               </FadeRight>
             </AnimatePresence>

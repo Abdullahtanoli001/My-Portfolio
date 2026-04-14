@@ -144,41 +144,41 @@ export default function ResumeDisplay({ className = "" }: ResumeDisplayProps) {
           className="mb-8 border-b border-accent/20 pb-6 text-center"
         >
           <h1 className="mb-2 bg-accent bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
-            Nikunj Khitha
+            Abdullah Khan
           </h1>
           <p className="mb-4 text-lg text-muted-foreground sm:text-xl md:text-2xl">
-            Software Development Engineer
+            AI/ML Engineer & Automation Specialist
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 text-sm sm:gap-4 md:text-base">
             <a
-              href="mailto:njkhitha2003@gmail.com"
+              href="mailto:abuk10977@gmail.com"
               className="flex items-center gap-2 text-accent underline-offset-4 hover:underline"
-              aria-label="Email Nikunj"
+              aria-label="Email Abdullah"
             >
               <Mail size={16} />
-              <span className="truncate">njkhitha2003@gmail.com</span>
+              <span className="truncate">abuk10977@gmail.com</span>
             </a>
             <a
-              href="tel:+919540234616"
+              href="tel:+1234567890"
               className="flex items-center gap-2 text-accent underline-offset-4 hover:underline"
-              aria-label="Call Nikunj"
+              aria-label="Call Abdullah"
             >
-              <Phone size={16} />
-              <span>+91 9540234616</span>
+              <Mail size={16} />
+              <span>+1 234 567 890</span>
             </a>
             <a
-              href="https://nikunj.codenex.dev"
+              href="https://abdullahkhan.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-accent underline-offset-4 hover:underline"
               aria-label="Visit website"
             >
               <Globe size={16} />
-              <span className="truncate">nikunj.codenex.dev</span>
+              <span className="truncate">abdullahkhan.ai</span>
             </a>
             <a
-              href="https://github.com/Nikunj2003"
+              href="https://github.com/Abdullahtanoli001"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-accent underline-offset-4 hover:underline"
@@ -188,7 +188,7 @@ export default function ResumeDisplay({ className = "" }: ResumeDisplayProps) {
               <span className="truncate">GitHub</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/nikunj-khitha/"
+              href="https://www.linkedin.com/in/abdullah-khan-3208662a2/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-accent underline-offset-4 hover:underline"

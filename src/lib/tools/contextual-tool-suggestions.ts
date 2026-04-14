@@ -443,7 +443,7 @@ export class ContextualToolSuggestions {
     const helpData = {
       home: {
         description:
-          "Welcome to Nikunj's portfolio homepage. Get an overview of skills, experience, and featured projects.",
+          "Welcome to Abdullah's portfolio homepage. Get an overview of skills, experience, and featured projects.",
         actions: [
           "Navigate to different sections",
           "View featured projects",
@@ -467,7 +467,7 @@ export class ContextualToolSuggestions {
       },
       about: {
         description:
-          "Learn about Nikunj's professional background, experience, and skills in detail.",
+          "Learn about Abdullah's professional background, experience, and skills in detail.",
         actions: [
           "View detailed experience",
           "Explore skills by category",
@@ -491,7 +491,7 @@ export class ContextualToolSuggestions {
       },
       projects: {
         description:
-          "Explore Nikunj's portfolio of projects across different technologies and domains.",
+          "Explore Abdullah's portfolio of projects across different technologies and domains.",
         actions: [
           "Filter projects by technology",
           "View project details",
@@ -515,7 +515,7 @@ export class ContextualToolSuggestions {
       },
       resume: {
         description:
-          "View and download Nikunj's professional resume with detailed qualifications and experience.",
+          "View and download Abdullah's professional resume with detailed qualifications and experience.",
         actions: [
           "Download PDF resume",
           "View online version",
@@ -539,7 +539,7 @@ export class ContextualToolSuggestions {
       },
       contact: {
         description:
-          "Contact Nikunj for opportunities, collaborations, or inquiries.",
+          "Contact Abdullah for opportunities, collaborations, or inquiries.",
         actions: [
           "Send a message",
           "View contact information",

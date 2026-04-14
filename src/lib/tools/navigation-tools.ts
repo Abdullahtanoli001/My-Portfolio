@@ -87,7 +87,7 @@ export class NavigateToPageTool extends BaseTool {
       home: "/",
       about: "/about",
       projects: "/projects",
-      resume: "/Nikunj_Resume.pdf",
+      resume: "/Abdullah_Resume.pdf",
     };
 
     const targetRoute = pageRoutes[page];
@@ -139,8 +139,8 @@ export class NavigateToPageTool extends BaseTool {
       return "projects";
     if (
       normalizedPage === "resume" ||
-      normalizedPage === "/nikunj_resume.pdf" ||
-      normalizedPage === "nikunj_resume.pdf"
+      normalizedPage === "/abdullah_resume.pdf" ||
+      normalizedPage === "abdullah_resume.pdf"
     )
       return "resume";
     return "home"; // fallback
@@ -371,7 +371,7 @@ export class NavigateToSectionTool extends BaseTool {
         home: "/",
         about: "/about",
         projects: "/projects",
-        resume: "/Nikunj_Resume.pdf",
+        resume: "/Abdullah_Resume.pdf",
       };
 
       actions.push({
@@ -429,8 +429,8 @@ export class NavigateToSectionTool extends BaseTool {
       return "projects";
     if (
       normalizedPage === "resume" ||
-      normalizedPage === "/nikunj_resume.pdf" ||
-      normalizedPage === "nikunj_resume.pdf"
+      normalizedPage === "/abdullah_resume.pdf" ||
+      normalizedPage === "abdullah_resume.pdf"
     )
       return "resume";
     return "home"; // fallback

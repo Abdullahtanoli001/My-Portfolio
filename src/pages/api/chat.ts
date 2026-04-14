@@ -473,12 +473,12 @@ export default async function handler(
 
         // Fallback library for missing categories
         const fallbackByCategory: Record<string, string[]> = {
-          experience: ["What recent impact has Nikunj made in his current role?"],
-          skills: ["Which technical skills does Nikunj use most day to day?"],
-          projects: ["Which project best showcases Nikunj's problem-solving?"],
-          achievements: ["Can you highlight one of Nikunj's standout achievements?"],
-          contact: ["What's the best way to connect with Nikunj for collaboration?"],
-          career_goals: ["What future goals is Nikunj focusing on next?"],
+          experience: ["What recent impact has Abdullah made in his current role?"],
+          skills: ["Which technical skills does Abdullah use most day to day?"],
+          projects: ["Which project best showcases Abdullah's problem-solving?"],
+          achievements: ["Can you highlight one of Abdullah's standout achievements?"],
+          contact: ["What's the best way to connect with Abdullah for collaboration?"],
+          career_goals: ["What future goals is Abdullah focusing on next?"],
         };
 
         if (diversified.length < 3) {
@@ -529,7 +529,7 @@ export default async function handler(
       return res.status(500).json({
         error: "Tool system is currently unavailable. Please try again later.",
         response:
-          "I apologize, but my enhanced features are temporarily unavailable. I can still provide basic information about Nikunj Khitha. What would you like to know?",
+          "I apologize, but my enhanced features are temporarily unavailable. I can still provide basic information about Abdullah Khan. What would you like to know?",
       });
     }
 
@@ -538,7 +538,7 @@ export default async function handler(
 
     if (message.includes("contact") || message.includes("email")) {
       return res.status(200).json({
-        response: `# Contact Nikunj Khitha\n\nYou can connect with Nikunj through various channels:\n\n## 📧 **Email**\n[njkhitha2003@gmail.com](mailto:njkhitha2003@gmail.com)\n\n## 📱 **Phone**\n+91 9540234616\n\n## 💼 **LinkedIn**\n[Connect on LinkedIn](https://www.linkedin.com/in/nikunj-khitha)\n\n## 🐙 **GitHub**\n[View Projects on GitHub](https://github.com/Nikunj2003)\n\n## 🌐 **Portfolio Website**\n[nikunj.codenex.dev](https://nikunj.codenex.dev)\n\n---\n\n> **Currently:** Associate Engineer at Armorcode Inc.\n> \n> **Interests:** Generative AI platforms, full-stack engineering, and enterprise solutions\n> \n> Feel free to reach out for collaborations, job opportunities, or tech discussions!`,
+        response: `# Contact Abdullah Khan\n\nYou can connect with Abdullah through various channels:\n\n## 📧 **Email**\n[abuk10977@gmail.com](mailto:abuk10977@gmail.com)\n\n## 💼 **LinkedIn**\n[Connect on LinkedIn](https://www.linkedin.com/in/abdullah-khan-3208662a2/)\n\n## 🐙 **GitHub**\n[View Projects on GitHub](https://github.com/Abdullahtanoli001)\n\n## 🌐 **Portfolio Website**\n[abdullahkhan.ai](https://abdullahkhan.ai)\n\n---\n\n> **Currently:** AI/ML Engineer and Automation Specialist\n> \n> **Interests:** AI Agents, RAG systems, and e-commerce growth\n> \n> Feel free to reach out for collaborations or project inquiries!`,
       });
     }
 
@@ -548,7 +548,7 @@ export default async function handler(
       message.includes("job")
     ) {
       return res.status(200).json({
-        response: `# Nikunj's Professional Experience\n\nNikunj has diverse experience across multiple companies:\n\n## 🚀 **Current: Associate Engineer at Armorcode Inc.**\n*Dec 2025 - Present*\n\n- Architecting enterprise-scale **GraphRAG platform** with \`Neo4j\` & \`PGVector\`\n- Unifying 500,000+ data entities from 5+ enterprise systems\n- Achieving **40% improved retrieval accuracy** and saving **$15,000+ annually**\n- Building backend for core platform with \`Java\` & \`Spring Boot\`\n\n## 🤖 **AI Automation Intern at Armorcode Inc.**\n*Jan 2025 - Nov 2025*\n\n- Built **documentation automation** using \`CrewAI\` & \`MCP\` servers\n- Reduced update latency by **99%** (72h to 45m)\n- Established universal LLM access layer with \`LiteLLM\`\n\n## 💻 **SDE Intern at Xansr Software**\n*June 2024 - Jan 2025*\n\n- Built **"Fantasy GPT"** chatbot with 98% accuracy using \`RAG\` & \`LangGraph\`\n- Created **"AIKO"** media assistant for personalized sports highlights\n- Improved API performance by **40%**\n\n> Would you like to know more about any specific role or project?`,
+        response: `# Abdullah's Professional Experience\n\nAbdullah is an AI/ML Engineer focused on high-impact automation:\n\n## 🚀 **Current: AI/ML Engineer**\n*2024 - Present*\n\n- Building autonomous **AI agents** for HR and system security\n- Developing **Evalyn HR Agent**, an AI-powered recruitment automation tool\n- Implementing **Phishing Detection Lab** using multi-agent AI systems\n- Orchestrating complex **AI PR Review pipelines** and workflow automation tools\n\n> Would you like to know more about his specific projects or technical stack?`,
       });
     }
 
@@ -558,18 +558,18 @@ export default async function handler(
       message.includes("tech")
     ) {
       return res.status(200).json({
-        response: `# Nikunj's Technical Skills\n\nNikunj has expertise across multiple technology stacks:\n\n## 🤖 **Generative AI & ML**\n- \`RAG\`, \`GraphRAG\`, \`LightRAG\`, \`Agentic AI\`\n- \`CrewAI\`, \`LangGraph\`, \`MCP\`, \`Prompt Engineering\`\n- \`AWS Bedrock\`, \`Gemini AI\`, \`Claude\`, \`Azure AI\`, \`LangChain\`\n\n## 🌐 **Full Stack Development**\n- \`Java\`, \`Spring Boot\`, \`Python\`, \`FastAPI\`\n- \`TypeScript\`, \`Node.js\`, \`Next.js\`, \`ReactJS\`\n- \`Prisma\`, \`Kafka\`, \`RabbitMQ\`, \`SQS\`\n\n## 🗄️ **Databases & Data**\n- \`Neo4j (Graph)\`, \`PostgreSQL (SQL/Vector)\`\n- \`MongoDB\`, \`Elasticsearch\`, \`AWS S3\`, \`Firebase\`\n\n## 🚀 **DevOps & Cloud**\n- \`AWS\`, \`Azure\`, \`Google Cloud\`\n- \`Docker\`, \`Kubernetes\`, \`CI/CD\`\n- \`GitHub Actions\`, \`Jenkins\`, \`Nginx\`, \`Grafana\`\n\n## 🛠️ **Dev Tools**\n- \`LiteLLM\`, \`Claude Code\`, \`Gemini CLI\`, \`n8n\`\n- \`Vercel\`, \`Swagger\`, \`Auth0\`, \`Postman\`\n\n> What specific technology would you like to know more about?`,
+        response: `# Abdullah's Technical Skills\n\nAbdullah has expertise in modern AI and web technologies:\n\n## 🤖 **AI & Automation**\n- \`LLMs\`, \`RAG\`, \`AI Agents\`, \`Prompt Engineering\`\n- \`LangChain\`, \`AutoGPT\`, \`Auto-n-n\` automation\n- \`Groq\`, \`OpenAI\`, \`FastAPI\`\n\n## 🌐 **Full Stack Development**\n- \`Next.js\`, \`React\`, \`TypeScript\`\n- \`Node.js\`, \`Python\`, \`TailwindCSS\`\n\n## 🛍️ **E-commerce & Business**\n- \`Shopify API\`, \`CRO (Conversion Rate Optimization)\`\n- \`Marketing Automation\`, \`SEO Tools\`\n\n> What specific part of his stack would you like to know more about?`,
       });
     }
 
     if (message.includes("project") || message.includes("portfolio")) {
       return res.status(200).json({
-        response: `# Nikunj's Key Projects\n\nNikunj has worked on diverse projects spanning multiple domains:\n\n## 🦙 **LLaMa-MCP-Streamlit**\n*AI/ML Project - Featured on mcp.so*\n- Full-stack AI app with Python & Streamlit using MCP\n- **Recognition:** 40+ GitHub stars, featured on official MCP directory\n- **Tech Stack:** \`Python\`, \`MCP\`, \`LLaMa\`, \`Azure OpenAI\`\n\n## 🎨 **CodeNex Images**\n*AI SaaS Platform*\n- AI image generation platform with Google Gemini\n- **Tech Stack:** \`React\`, \`TypeScript\`, \`Node.js\`, \`Auth0\`, \`MongoDB\`\n\n## 🤖 **Fantasy GPT**\n*AI/ML Project*\n- Sports chatbot for fantasy enthusiasts\n- **Accuracy:** 98% using \`RAG\` & \`LangGraph\`\n\n## 📺 **AIKO**\n*AI Media Assistant*\n- Personalized sports highlights with real-time commentary\n- **Accuracy:** 96.67% AI-generated highlights\n\n## 📊 **GraphRAG Platform**\n*Enterprise Solution*\n- Unified 500,000+ data entities from 5+ systems\n- **Tech Stack:** \`Neo4j\`, \`PGVector\`, \`Java\`, \`Spring Boot\`\n\n> Which project interests you most? I can share more details!`,
+        response: `# Abdullah's Key Projects\n\nAbdullah specializes in building revenue-driving AI systems:\n\n## 🚀 **Ranknaut**\n- AI SEO and content automation tool\n- Automates complex keyword research and content generation\n\n## 🛍️ **AI CRO Agent**\n- Analyzes Shopify stores to suggest conversion improvements\n- Uses AI to identify friction points in user journeys\n\n## 🛠️ **Shopify Automation Tools**\n- Workflow automation for e-commerce operations\n- Streamlines inventory, order processing, and customer support\n\n> Which project interests you most? I can provide more details on any of these!`,
       });
     }
 
     return res.status(200).json({
-      response: `# Welcome! I'm here to help you learn about Nikunj Khitha\n\n## What would you like to know?\n\n### 🔹 **Professional Experience**\n- Associate Engineer at Armorcode Inc.\n- Building enterprise-scale GenAI platforms\n- GraphRAG and full-stack development\n\n### 🔹 **Technical Skills**\n- Generative AI: RAG, GraphRAG, CrewAI, AWS Bedrock\n- Full Stack: Java, Spring Boot, Python, TypeScript\n- DevOps: AWS, Docker, Kubernetes\n\n### 🔹 **AI/ML Projects**\n- LLaMa-MCP-Streamlit (Featured on mcp.so)\n- CodeNex Images (AI SaaS)\n- Fantasy GPT (98% accuracy)\n\n### 🔹 **Key Achievements**\n- Architected platform serving 200+ enterprise customers\n- Reduced LLM costs by 50%, saving $15,000+ annually\n- 40+ GitHub stars on open source projects\n\n### 🔹 **Contact Information**\n- How to reach Nikunj for opportunities\n- Professional social links\n\n> Just ask me anything about Nikunj's background, and I'll provide detailed information!`,
+      response: `# Welcome! I'm here to help you learn about Abdullah Khan\n\n## What would you like to know?\n\n### 🔹 **Professional Background**\n- AI/ML Engineer & Automation Specialist\n- Building autonomous agents and e-commerce tools\n- Expert in Next.js, FastAPI, and Python\n\n### 🔹 **Key Projects**\n- Ranknaut: AI-driven SEO automation\n- AI CRO Agent: Shopify conversion optimizer\n- Custom Marketing & Sales automation systems\n\n### 🔹 **Technical Skills**\n- AI: LLMs, RAG, LangChain, Agents\n- Web: Next.js, React, TypeScript, FastAPI\n- Automation: Shopify API, Workflow scripts\n\n> Just ask me anything about Abdullah's background or his work!`,
     });
   }
 }

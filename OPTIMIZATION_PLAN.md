@@ -2,7 +2,7 @@
 
 > **Author**: Claude (AI Assistant)  
 > **Date**: December 23, 2025  
-> **Project**: Nikunj Khitha's Next.js Portfolio
+> **Project**: Abdullah Khan's AI/ML Portfolio
 
 ---
 

@@ -41,18 +41,18 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Projects by Nikunj Khitha - Software Development Engineer"
-        description="Explore a diverse collection of projects by Nikunj Khitha, an AI Specialist and Full Stack Developer. Discover innovative AI-driven solutions, responsive web applications, and seamless user interfaces showcasing skills in MERN Stack, DevOps, Azure AI, microservices, and Flutter mobile app development."
+        title="Projects by Abdullah Khan - AI/ML Engineer"
+        description="Explore a diverse collection of projects by Abdullah Khan, an AI/ML Engineer and Automation Specialist. Discover innovative AI-powered solutions like Evalyn HR Agent, Phishing Detection Lab, and AI PR Review systems built with Python and FastAPI."
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Explore Nikunj Khitha's Projects - FullStack & AI Developer",
+          title: "Explore Abdullah Khan's Projects - AI/ML & Automation Engineer",
           description:
-            "Showcasing an array of projects crafted by Nikunj Khitha, highlighting expertise in AI, web development, and mobile app development. Experience innovation through the MERN Stack, DevOps practices, Azure AI solutions, and cloud technologies that enhance digital experiences.",
+            "Showcasing an array of projects crafted by Abdullah Khan, highlighting expertise in AI agents, Phishing detection, and LangGraph chatbots. Experience innovation through data-driven AI systems and custom automation workflows.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: "Nikunj Khitha - Project Showcase",
+              alt: "Abdullah Khan - Project Showcase",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -102,9 +102,9 @@ export default function Projects() {
             </div>
 
             <p className="mb-6 max-w-3xl text-base font-medium leading-relaxed text-zinc-700 dark:text-zinc-300 sm:text-lg">
-              This page lists selected software projects by Nikunj Khitha,
-              including AI products, backend systems, and full-stack
-              applications with links to source repositories.
+              This page lists selected software projects by Abdullah Khan,
+              including AI products, automation systems, and e-commerce tools
+              with focus on AI-driven growth and optimization.
             </p>
 
             {/* Category Filter Buttons */}

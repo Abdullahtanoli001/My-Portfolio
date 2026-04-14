@@ -17,18 +17,18 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Nikunj Khitha - Software Development Engineer"
-        description="Explore the portfolio of Nikunj Khitha, an innovative AI Specialist and Full Stack Developer. Discover projects showcasing expertise in Next.js, MERN Stack, Flutter, DevOps, Azure AI, and microservices, all designed to enhance user experiences on web and mobile applications."
+        title="Abdullah Khan - AI/ML Engineer"
+        description="Explore the portfolio of Abdullah Khan, an AI/ML Engineer specializing in AI agents, Phishing detection, and HR automation. Discover projects like Evalyn HR Agent and Phishing Detection Lab built with Python, FastAPI, and LangGraph."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Nikunj Khitha - Portfolio of a FullStack & AI Developer",
+          title: "Abdullah Khan - Portfolio of an AI/ML & Automation Engineer",
           description:
-            "Delve into the world of web development with Nikunj Khitha. Explore a portfolio featuring advanced projects that highlight skills in Next.js, MERN Stack, Flutter, DevOps, Azure AI, and microservices, reflecting a dedication to creating impactful web and mobile applications.",
+            "Explore a portfolio featuring advanced AI projects, Phishing detection labs, and HR automation agents. Expert in Python, FastAPI, LangGraph, and AI agent development.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: "Nikunj Khitha - Professional Developer Portfolio",
+              alt: "Abdullah Khan - AI/ML Engineer Portfolio",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -59,8 +59,8 @@ export default function Home() {
       <section className="px-6 pb-4 sm:px-14 md:px-20">
         <div className="mx-auto max-w-7xl">
           <p className="max-w-3xl text-base font-medium leading-relaxed text-zinc-700 dark:text-zinc-300 sm:text-lg">
-            Nikunj Khitha is a software development engineer specializing in AI,
-            full-stack development, and cloud-native product engineering.
+            Abdullah Khan is an AI/ML Engineer focused on building intelligent systems that solve real-world problems. 
+            He specializes in agent-based architectures, automation tools, and scalable AI solutions.
           </p>
         </div>
       </section>
@@ -77,39 +77,46 @@ export default function Home() {
                   About Me
                 </h2>
                 <p className="mt-6 text-lg font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-xl">
-                  I&apos;m a passionate software engineer who specializes in
+                  I&apos;m a passionate engineer who specializes in
                   building intelligent, end-to-end solutions at the intersection
                   of{" "}
                   <span className="font-semibold text-accent">
-                    AI and automation
+                    machine intelligence and business needs
                   </span>
-                  . With expertise spanning from enterprise-grade testing
-                  frameworks with Spring Boot to sophisticated AI agents using
-                  AWS Bedrock, Azure AI, and Crew AI.
+                  . I focus on creating agentic systems using LangChain and LangGraph to build 
+                  impactful solutions across e-commerce and SaaS domains.
                 </p>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   <div className="rounded-lg bg-accent/10 p-4 backdrop-blur-sm">
                     <h3 className="font-semibold text-accent">
-                      Full Stack Development
+                      AI / ML
                     </h3>
                     <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-                      MERN Stack, Next.js, Flutter, and modern web technologies
+                      Machine Learning, MLOps, LangChain, and LangGraph agents
                     </p>
                   </div>
                   <div className="rounded-lg bg-accent/10 p-4 backdrop-blur-sm">
                     <h3 className="font-semibold text-accent">
-                      AI & Machine Learning
+                      Backend
                     </h3>
                     <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-                      Azure AI, OpenAI, LangChain, and intelligent automation
+                      Building robust APIs with Python and FastAPI
                     </p>
                   </div>
-                  <div className="rounded-lg bg-accent/10 p-4 backdrop-blur-sm sm:col-span-2 lg:col-span-1">
+                  <div className="rounded-lg bg-accent/10 p-4 backdrop-blur-sm">
                     <h3 className="font-semibold text-accent">
-                      DevOps & Cloud
+                      Data Science
                     </h3>
                     <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-                      CI/CD pipelines, Docker, Kubernetes, and Azure services
+                      Analysis and visualization with NumPy, Pandas, and Matplotlib
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-accent/10 p-4 backdrop-blur-sm">
+                    <h3 className="font-semibold text-accent">
+                      DevOps / Tools
+                    </h3>
+                    <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
+                      Docker, Git, MLflow, and workflow automation with n8n
                     </p>
                   </div>
                 </div>

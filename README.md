@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Nikunj Khitha – Developer & AI Portfolio
+# 🌐 Abdullah Khan – AI/ML Engineer Portfolio
 
 An interactive, animated, AI‑augmented portfolio built with **Next.js**, featuring a floating conversational assistant that understands the site structure, can guide navigation, trigger UI interactions, and answer questions about professional background, projects, and skills.
 
@@ -137,7 +137,7 @@ Route | Purpose
 `/` (Home) | Landing hero, skills snapshot, featured sections, AI chat entry
 `/about` | Detailed background, narrative profile
 `/projects` | Project gallery sourced from `src/data/projects.ts`
-`/Nikunj_Resume.pdf` | Downloadable resume PDF
+`/Abdullah_Resume.pdf` | Downloadable resume PDF
 `/404` | Custom not‑found with consistent styling
 API routes (`/api/*`) | Chat endpoint, email sending (rate limited)
 
@@ -185,8 +185,8 @@ Add a new tool:
 
 ### SEO + GEO measurement playbook
 1. **Google Search Console**
-   - Submit sitemap: `https://nikunj.codenex.dev/sitemap.xml`
-   - Validate canonical status for `/`, `/about`, `/projects` and verify `/Nikunj_Resume.pdf` is reachable
+   - Submit sitemap: `https://abdullah-portfolio.vercel.app/sitemap.xml`
+   - Validate canonical status for `/`, `/about`, `/projects` and verify `/Abdullah_Resume.pdf` is reachable
    - Review indexing coverage and rich-result enhancements monthly
 2. **Bing Webmaster Tools**
    - Submit same sitemap and monitor crawl/index diagnostics

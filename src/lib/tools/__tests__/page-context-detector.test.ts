@@ -46,7 +46,7 @@ describe("PageContextDetector", () => {
 
     it("should detect resume page from resume PDF URL", () => {
       const result = detector.detectFromUrl(
-        "https://example.com/Nikunj_Resume.pdf"
+        "https://example.com/Abdullah_Resume.pdf"
       );
 
       expect(result.page).toBe("resume");

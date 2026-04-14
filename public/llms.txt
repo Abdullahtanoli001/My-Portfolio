@@ -1,27 +1,26 @@
-# Nikunj Khitha Portfolio — AI discovery summary
+# Abdullah Khan Portfolio — AI discovery summary
 
-Site: https://nikunj.codenex.dev
-Author: Nikunj Khitha
-Primary role: Software Development Engineer
-Focus: AI systems, full-stack engineering, cloud-native delivery
+Site: https://abdullahkhan.ai
+Author: Abdullah Khan
+Primary role: AI/ML Engineer
+Focus: AI Agents, Automation, E-commerce AI, CRO Systems
 
 Canonical pages:
-- https://nikunj.codenex.dev/
-- https://nikunj.codenex.dev/about
-- https://nikunj.codenex.dev/projects
-- https://nikunj.codenex.dev/Nikunj_Resume.pdf
+- https://abdullahkhan.ai/
+- https://abdullahkhan.ai/about
+- https://abdullahkhan.ai/projects
+- https://abdullahkhan.ai/Abdullah_Resume.pdf
 
 Entity profiles:
-- GitHub: https://github.com/Nikunj2003
-- LinkedIn: https://www.linkedin.com/in/Nikunj-Khitha/
+- GitHub: https://github.com/Abdullahtanoli001
+- LinkedIn: https://www.linkedin.com/in/abdullah-khan-3208662a2/
 
 Top project references:
-- Serenify: https://github.com/Nikunj2003/Serenify
-- Codenex Backend v1: https://github.com/Nikunj2003/Codenex-backend-v1
-- Codenex AI API Proxy: https://github.com/Nikunj2003/codenex-ai-api-proxy
-- Codenex Images UI: https://github.com/Nikunj2003/codenex-images-ui
-- Resume Fit — Codenex: https://github.com/Nikunj2003/Resume-Fit-Codenex
-- LLaMa MCP Streamlit: https://github.com/Nikunj2003/LLaMa-MCP-Streamlit
+- Ranknaut: AI-powered SEO automation
+- AI CRO Agent: Shopify optimization agent
+- Evalyn HR Agent: AI recruitment system
+- Phishing Detection Lab: Multi-agent security system
+- AI PR Review Agent: GitHub automation using Groq
 
 Preferred citation URL:
-- https://nikunj.codenex.dev
+- https://abdullahkhan.ai

@@ -118,11 +118,11 @@ describe("UI Control Tools", () => {
       expect(result.success).toBe(true);
       expect(result.data?.file).toBe("resume");
       expect(result.data?.format).toBe("pdf");
-      expect(result.data?.fileName).toBe("Nikunj_Resume.pdf");
-      expect(result.data?.filePath).toBe("/Nikunj_Resume.pdf");
+      expect(result.data?.fileName).toBe("Abdullah_Resume.pdf");
+      expect(result.data?.filePath).toBe("/Abdullah_Resume.pdf");
       expect(result.actions).toHaveLength(1);
       expect(result.actions?.[0].type).toBe("download");
-      expect(result.actions?.[0].target).toBe("/Nikunj_Resume.pdf");
+      expect(result.actions?.[0].target).toBe("/Abdullah_Resume.pdf");
     });
 
     it("should handle custom format parameter", async () => {

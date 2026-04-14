@@ -53,7 +53,7 @@ export default function LandingHero() {
               <FadeUp key="title-main" duration={0.6} whileInView={true}>
                 <div className="relative">
                   <h1 className="bg-gradient-to-r from-accent via-accent-light to-accent bg-clip-text py-2 pb-4 text-4xl font-bold text-transparent sm:pb-6 sm:text-6xl md:text-7xl xl:text-8xl">
-                    Nikunj Khitha
+                    Abdullah Khan
                   </h1>
                   {/* Animated underline */}
                   <motion.div
@@ -65,10 +65,10 @@ export default function LandingHero() {
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2 pt-2">
                   <span className="rounded-full bg-accent/10 px-3 py-1.5 text-base font-semibold text-accent backdrop-blur-sm sm:px-4 sm:py-2 sm:text-lg md:text-xl">
-                    Software Development Engineer
+                    AI/ML Engineer
                   </span>
                   <span className="rounded-full bg-accent/10 px-3 py-1.5 text-base font-semibold text-accent backdrop-blur-sm sm:px-4 sm:py-2 sm:text-lg md:text-xl">
-                    Gen AI Specialist
+                    Automation Specialist
                   </span>
                 </div>
               </FadeUp>
@@ -85,23 +85,26 @@ export default function LandingHero() {
                     I&apos;m
                     <span className="font-semibold text-accent">
                       {" "}
-                      Nikunj Khitha
+                      Abdullah Khan
                     </span>
                     .
                   </p>
                   <p className="mt-3 text-base font-medium leading-relaxed text-zinc-700 dark:text-zinc-300 sm:mt-4 sm:text-xl md:text-2xl">
-                    I transform innovative concepts into seamless user experiences
-                    through
+                    I specialize in
                     <span className="font-semibold text-accent">
                       {" "}
-                      cutting-edge web
-                    </span>{" "}
-                    and
-                    <span className="font-semibold text-accent">
-                      {" "}
-                      AI solutions
+                      Machine Learning
                     </span>
-                    .
+                    ,
+                    <span className="font-semibold text-accent">
+                      {" "}
+                      MLOps
+                    </span>
+                    , and building intelligent
+                    <span className="font-semibold text-accent">
+                      {" "}
+                      AI Agents
+                    </span>.
                   </p>
                 </div>
               </FadeUp>
@@ -109,7 +112,7 @@ export default function LandingHero() {
               <FadeUp key="stats" duration={0.6} delay={0.4} whileInView={true}>
                 <div className="mt-8 grid max-w-lg grid-cols-2 gap-4 sm:grid-cols-3">
                   <div className="rounded-lg border border-accent/20 bg-white/10 p-4 backdrop-blur-sm">
-                    <div className="text-2xl font-bold text-accent">1+</div>
+                    <div className="text-2xl font-bold text-accent">3+</div>
                     <div className="text-sm text-zinc-600 dark:text-zinc-400">
                       Years Experience
                     </div>

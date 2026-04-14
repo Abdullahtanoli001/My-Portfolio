@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nikunj.codenex.dev/about</loc>
+    <loc>https://abdullah-portfolio.vercel.app/about</loc>
     <lastmod>2026-03-03T18:51:03.804Z</lastmod>
   </url>
   <url>
@@ -9,7 +9,7 @@
     <lastmod>2026-03-03T14:18:58.044Z</lastmod>
   </url>
   <url>
-    <loc>https://nikunj.codenex.dev/projects</loc>
+    <loc>https://abdullah-portfolio.vercel.app/projects</loc>
     <lastmod>2026-03-03T14:18:58.044Z</lastmod>
   </url>
 </urlset>

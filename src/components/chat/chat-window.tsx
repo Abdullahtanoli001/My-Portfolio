@@ -82,7 +82,7 @@ export default function ChatWindow({
     {
       id: "welcome",
       content:
-        "Hi! I'm an AI assistant that can answer questions about Nikunj Khitha's background, skills, and experience. What would you like to know?",
+        "Hi! I'm a personal AI assistant for Abdullah Khan. I can answer questions about his background, skills, and experience. What would you like to know?",
       sender: "ai",
       timestamp: new Date(),
     },
@@ -332,7 +332,7 @@ export default function ChatWindow({
       {
         id: "welcome",
         content:
-          "Hi! I'm an AI assistant that can answer questions about Nikunj Khitha's background, skills, and experience. What would you like to know?",
+          "Hi! I'm a personal AI assistant for Abdullah Khan. I can answer questions about his background, skills, and experience. What would you like to know?",
         sender: "ai",
         timestamp: new Date(),
       },
@@ -551,10 +551,10 @@ export default function ChatWindow({
   };
 
   const suggestions = [
-    "What technologies does Nikunj use?",
-    "Summarize Nikunj's experience",
-    "List notable projects",
-    "What are key skills?",
+    "What technologies does Abdullah use?",
+    "Summarize Abdullah's experience",
+    "Tell me about Ranknaut",
+    "Show Phishing Detection Lab details",
     "Open Resume PDF",
     "Toggle theme",
     "Download Resume PDF",
@@ -686,8 +686,8 @@ export default function ChatWindow({
               transition={{ delay: 0.2, duration: 0.3 }}
             >
               {isFullScreen
-                ? "AI Assistant - Ask about Nikunj"
-                : "Ask about Nikunj"}
+                ? "AI Assistant - Ask about Abdullah Khan"
+                : "Ask about Abdullah Khan"}
             </motion.h3>
           </div>
           <div className="flex items-center gap-1">
@@ -1131,7 +1131,7 @@ export default function ChatWindow({
                 if (!hasInteracted) setHasInteracted(true);
               }}
               onKeyDown={handleKeyDown}
-              placeholder="Ask about Nikunj's experience, skills..."
+              placeholder="Ask about Abdullah Khan's experience, skills..."
               rows={1}
               className={classNames(
                 "flex-1 resize-none text-sm leading-relaxed",

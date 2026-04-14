@@ -288,7 +288,7 @@ export class ToolContextUtils {
       .replace(/^\/+|\/+$/g, "")
       .toLowerCase();
 
-    if (cleanPath === "nikunj_resume.pdf") {
+    if (cleanPath === "abdullah_resume.pdf") {
       return { page: "resume" };
     }
 

@@ -133,13 +133,13 @@ describe("NavigateToPageTool", () => {
       expect(result.data?.route).toBe("/projects");
     });
 
-    it("should map resume to /Nikunj_Resume.pdf", async () => {
+    it("should map resume to /Abdullah_Resume.pdf", async () => {
       const result = await tool.execute({ page: "resume" }, mockContext);
-      expect(result.data?.route).toBe("/Nikunj_Resume.pdf");
+      expect(result.data?.route).toBe("/Abdullah_Resume.pdf");
     });
 
     it("should treat resume PDF route with query as current resume page", async () => {
-      mockContext.currentPage = "/Nikunj_Resume.pdf?download=1";
+      mockContext.currentPage = "/Abdullah_Resume.pdf?download=1";
       const result = await tool.execute({ page: "resume" }, mockContext);
 
       expect(result.success).toBe(true);

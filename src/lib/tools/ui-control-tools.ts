@@ -167,8 +167,8 @@ export class TriggerDownloadTool extends BaseTool {
 
       switch (file) {
         case "resume":
-          filePath = "/Nikunj_Resume.pdf";
-          fileName = "Nikunj_Resume.pdf";
+          filePath = "/Abdullah_Resume.pdf";
+          fileName = "Abdullah_Resume.pdf";
           break;
         default:
           return this.createErrorResult(

@@ -17,18 +17,18 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About Nikunj Khitha - Software Development Engineer"
-        description="Discover the journey and skills of Nikunj Khitha, a passionate AI Specialist and Full Stack Developer. Explore my commitment to creating innovative web and mobile solutions, leveraging the MERN Stack, DevOps, and Azure AI expertise."
+        title="About Abdullah Khan - AI/ML Engineer"
+        description="Discover the journey and skills of Abdullah Khan, an AI/ML Engineer specializing in AI agents, automation, and CRO. Explore my expertise in Next.js, FastAPI, and Shopify development."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Nikunj Khitha - Software Development Engineer",
+          title: "Learn About Abdullah Khan - AI/ML Engineer",
           description:
-            "Dive into the story of Nikunj Khitha, an AI Specialist and Full Stack Developer. Uncover my experiences and skills in delivering exceptional web solutions through DevOps, Azure AI, microservices, and mobile development.",
+            "Dive into the story of Abdullah Khan, an AI/ML Engineer and Automation Specialist. Uncover my experiences in building AI agents, security tools like Phishing Detection Lab, and HR automation solutions.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: "Nikunj Khitha - Professional Developer Portfolio",
+              alt: "Abdullah Khan - AI/ML Engineer Portfolio",
             },
           ],
           siteName: siteMetadata.siteName,

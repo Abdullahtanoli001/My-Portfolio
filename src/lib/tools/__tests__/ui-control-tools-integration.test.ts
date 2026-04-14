@@ -101,7 +101,7 @@ describe("UI Control Tools Integration", () => {
       );
 
       expect(result.success).toBe(true);
-      expect(result.data?.fileName).toBe("Nikunj_Resume.pdf");
+      expect(result.data?.fileName).toBe("Abdullah_Resume.pdf");
       expect(result.actions).toHaveLength(1);
       expect(result.actions?.[0].type).toBe("download");
     });

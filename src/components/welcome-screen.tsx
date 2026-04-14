@@ -248,7 +248,7 @@ export default function WelcomeScreen({
               variants={itemVariants}
               className="mb-6 bg-gradient-to-r from-accent via-accent-light to-accent bg-clip-text text-5xl font-bold text-transparent md:text-7xl"
             >
-              Nikunj Khitha
+              Abdullah Khan
             </motion.h1>
 
             {/* Subtitle */}
@@ -256,11 +256,11 @@ export default function WelcomeScreen({
               variants={itemVariants}
               className="mb-12 text-xl font-medium text-muted-foreground md:text-2xl"
             >
-              <span className="text-foreground">Software Engineer</span>
+              <span className="text-foreground">AI / ML Engineer</span>
               <span className="mx-3 text-accent">•</span>
-              <span className="text-foreground">AI Enthusiast</span>
+              <span className="text-foreground">Python Specialist</span>
               <span className="mx-3 text-accent">•</span>
-              <span className="text-foreground">Full Stack Developer</span>
+              <span className="text-foreground">MLOps Engineer</span>
             </motion.div>
 
             {/* Dynamic Welcome Text */}
