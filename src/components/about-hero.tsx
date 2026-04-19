@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
-import heroProfileImg from "../../public/images/heroProfile.png";
+
 
 export default function AboutHero() {
   return (
@@ -18,7 +18,7 @@ export default function AboutHero() {
             <AnimatePresence>
               <FadeUp key="hero-image" duration={0.6} whileInView>
                 <Image
-                  src={heroProfileImg}
+                  src="/images/heroProfile.png"
                   width={800}
                   height={800}
                   className="h-auto w-full rounded-xl border border-accent/10 px-0 xl:px-16"

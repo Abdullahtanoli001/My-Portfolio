@@ -4,7 +4,7 @@
 
 An interactive, animated, AI‑augmented portfolio built with **Next.js**, featuring a floating conversational assistant that understands the site structure, can guide navigation, trigger UI interactions, and answer questions about professional background, projects, and skills.
 
-![Homepage Screenshot](public/static/home.png)
+![Homepage Screenshot](/static/home.png)
 
 </div>
 
