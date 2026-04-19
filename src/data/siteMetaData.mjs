@@ -6,7 +6,7 @@ export const siteMetadata = {
   language: "en-us",
   theme: "dark",
   siteName: "Abdullah Khan",
-  siteUrl: "https://abdullah-portfolio.vercel.app", // Placeholder URL
+  siteUrl: "https://abdullah-khanai.vercel.app",
   siteRepo: "https://github.com/Abdullahtanoli001/My-Next-Js-Portfolio",
   siteLogo: "/favicon.ico",
   image: "/my-image.png",
