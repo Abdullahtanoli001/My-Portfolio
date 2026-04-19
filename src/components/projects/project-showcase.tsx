@@ -2,6 +2,7 @@ import Link from "next/link";
 import { motion as _motion } from "framer-motion";
 const motion = _motion as any;
 import { useAnimationGate } from "@/contexts/animation-gate";
+import { useEffect } from "react";
 
 import { ArrowTopRight } from "@/components/icons";
 import type { ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
@@ -13,6 +14,14 @@ interface ProjectShowcaseProps {
 
 export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
   const { animationsReady } = useAnimationGate();
+
+  // Diagnostic logging
+  useEffect(() => {
+    console.log("ProjectShowcase rendering. Project paths:", 
+      projects.map(p => ({ title: p.title, light: p.image.LIGHT, dark: p.image.DARK }))
+    );
+  }, [projects]);
+
   const containerVariants = {
     hidden: {},
     show: {
@@ -31,6 +40,7 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
+    console.error(`Failed to load image: ${target.src}. Falling back to /images/fallback.png`);
     target.src = "/images/fallback.png";
   };
 
@@ -75,19 +85,11 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                     <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-accent/10">
                       <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                       <img
-                        src={proj.image.LIGHT}
+                        src={proj.image.LIGHT || "/images/fallback.png"}
                         alt={`${proj.title} preview`}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:hidden"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         onError={handleImageError}
                       />
-                      {proj.image.DARK && (
-                        <img
-                          src={proj.image.DARK}
-                          alt={`${proj.title} preview`}
-                          className="hidden h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:block"
-                          onError={handleImageError}
-                        />
-                      )}
                     </div>
 
                     <div className="mt-4 flex items-start justify-between gap-4">
@@ -121,17 +123,6 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                           #{tag}
                         </motion.span>
                       ))}
-                      {proj.tags.length > 5 && (
-                        <motion.span
-                          variants={{
-                            hidden: { opacity: 0, y: 6 },
-                            show: { opacity: 1, y: 0 },
-                          }}
-                          className="rounded-full bg-accent/10 px-2 py-1 text-xs font-medium text-accent/80 backdrop-blur-sm"
-                        >
-                          +{proj.tags.length - 5}
-                        </motion.span>
-                      )}
                     </motion.div>
                   </motion.div>
                 </Link>
@@ -142,25 +133,16 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
               {projects.map((proj) => (
                 <Link key={proj.title} href={proj.href} className="group">
                   <div className="relative h-full overflow-hidden rounded-xl border border-accent/20 bg-white/10 p-4 shadow-md backdrop-blur-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 dark:bg-black/20">
-                    {/* Decorative glow */}
                     <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-60" />
 
                     <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-accent/10">
                       <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                       <img
-                        src={proj.image.LIGHT}
+                        src={proj.image.LIGHT || "/images/fallback.png"}
                         alt={`${proj.title} preview`}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:hidden"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         onError={handleImageError}
                       />
-                      {proj.image.DARK && (
-                        <img
-                          src={proj.image.DARK}
-                          alt={`${proj.title} preview`}
-                          className="hidden h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:block"
-                          onError={handleImageError}
-                        />
-                      )}
                     </div>
 
                     <div className="mt-4 flex items-start justify-between gap-4">
@@ -181,11 +163,6 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                           #{tag}
                         </span>
                       ))}
-                      {proj.tags.length > 5 && (
-                        <span className="rounded-full bg-accent/10 px-2 py-1 text-xs font-medium text-accent/80 backdrop-blur-sm">
-                          +{proj.tags.length - 5}
-                        </span>
-                      )}
                     </div>
                   </div>
                 </Link>
