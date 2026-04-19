@@ -40,7 +40,7 @@ export default function LandingHero() {
     <>
       <section
         ref={ref}
-        className="pointer-events-auto relative flex min-h-[100dvh] items-start px-6 pt-4 sm:px-14 sm:pt-6 md:px-20 md:pt-8"
+        className="pointer-events-auto relative flex min-h-0 flex-col items-start px-6 pt-4 pb-10 sm:px-14 sm:pt-6 sm:pb-12 md:px-20 md:pt-8 md:pb-14"
       >
         {/* Background gradient effects */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
