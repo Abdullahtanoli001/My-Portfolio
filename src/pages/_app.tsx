@@ -68,9 +68,9 @@ function AppContent({ Component, pageProps }: AppProps) {
   const defaultCanonical = `${siteMetadata.siteUrl}${canonicalPath === "/" ? "" : canonicalPath}`;
 
   useEffect(() => {
-    const handleRouteChangeStart = () => {
+    const handleRouteChangeStart = () =>  {
       setIsTransitioning(true);
-      setAnimationsReady(false); // gate animations during route transition
+      setAnimationsReady(false);      // gate animations during route transition
     };
 
     const handleRouteChangeComplete = () => {
