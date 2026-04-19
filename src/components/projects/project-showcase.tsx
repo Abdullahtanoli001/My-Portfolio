@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { motion as _motion } from "framer-motion";
 const motion = _motion as any;
 import { useAnimationGate } from "@/contexts/animation-gate";
@@ -29,6 +28,11 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
       transition: { duration: 0.35, ease: "easeOut" },
     },
   } as const;
+
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.target as HTMLImageElement;
+    target.src = "/images/fallback.png";
+  };
 
   return (
     <section className="overflow-hidden px-6 py-28 sm:px-14 md:px-24">
@@ -70,24 +74,18 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
 
                     <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-accent/10">
                       <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      <Image
+                      <img
                         src={proj.image.LIGHT}
                         alt={`${proj.title} preview`}
-                        width={640}
-                        height={360}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:hidden"
-                        priority={false}
-                        loading="lazy"
+                        onError={handleImageError}
                       />
                       {proj.image.DARK && (
-                        <Image
+                        <img
                           src={proj.image.DARK}
                           alt={`${proj.title} preview`}
-                          width={640}
-                          height={360}
                           className="hidden h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:block"
-                          priority={false}
-                          loading="lazy"
+                          onError={handleImageError}
                         />
                       )}
                     </div>
@@ -149,24 +147,18 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
 
                     <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-accent/10">
                       <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      <Image
+                      <img
                         src={proj.image.LIGHT}
                         alt={`${proj.title} preview`}
-                        width={640}
-                        height={360}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:hidden"
-                        priority={false}
-                        loading="lazy"
+                        onError={handleImageError}
                       />
                       {proj.image.DARK && (
-                        <Image
+                        <img
                           src={proj.image.DARK}
                           alt={`${proj.title} preview`}
-                          width={640}
-                          height={360}
                           className="hidden h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] dark:block"
-                          priority={false}
-                          loading="lazy"
+                          onError={handleImageError}
                         />
                       )}
                     </div>

@@ -65,6 +65,10 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           className="h-full w-full bg-cover"
           style={{ aspectRatio }}
           src={images[imageIndex]}
+          onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+            const target = e.target as HTMLImageElement;
+            target.src = "/images/fallback.png";
+          }}
           custom={direction}
           variants={variant}
           initial="enter"

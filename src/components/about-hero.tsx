@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import FadeUp from "@/animation/fade-up";
@@ -17,13 +17,14 @@ export default function AboutHero() {
           <div className="w-full sm:w-1/2 md:w-2/3 lg:inline-block lg:h-full lg:w-1/2">
             <AnimatePresence>
               <FadeUp key="hero-image" duration={0.6} whileInView>
-                <Image
+                <img
                   src="/images/heroProfile.png"
-                  width={800}
-                  height={800}
                   className="h-auto w-full rounded-xl border border-accent/10 px-0 xl:px-16"
                   alt="Portrait of Abdullah Khan"
-                  priority={false}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "/images/fallback.png";
+                  }}
                 />
               </FadeUp>
             </AnimatePresence>
