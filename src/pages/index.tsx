@@ -5,6 +5,7 @@ import Link from "next/link";
 import LandingHero from "@/components/landing-hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+import Services from "@/components/services";
 
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
@@ -69,20 +70,8 @@ export default function Home() {
 
       <SectionDivider />
 
-      {/* ABOUT */}
-      <AnimatePresence>
-        <FadeUp duration={0.3} whileInView>
-          <section className="px-6 py-16 sm:px-14 md:px-20">
-            <div className="mx-auto max-w-7xl">
-              <h2 className="text-3xl font-bold text-accent">About Me</h2>
-
-              <p className="mt-6 text-lg text-zinc-800 dark:text-zinc-300">
-                I specialize in AI agents, automation systems, and backend development using Python, FastAPI, and LangGraph.
-              </p>
-            </div>
-          </section>
-        </FadeUp>
-      </AnimatePresence>
+      {/* SERVICES */}
+      <Services />
 
       <SectionDivider />
 
