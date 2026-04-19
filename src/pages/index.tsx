@@ -5,9 +5,11 @@ import Link from "next/link";
 import LandingHero from "@/components/landing-hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+
 import FadeUp from "@/animation/fade-up";
 import { AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/section-divider";
@@ -16,9 +18,10 @@ import { getPersonSchema, getWebsiteSchema, toJsonLd } from "@/lib/seo/schema";
 export default function Home() {
   return (
     <>
+      {/* SEO */}
       <NextSeo
         title="Abdullah Khan - AI/ML Engineer"
-        description="Explore the portfolio of Abdullah Khan, an AI/ML Engineer specializing in AI agents, Phishing detection, and HR automation."
+        description="AI/ML Engineer portfolio featuring AI agents, automation, and backend systems."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
@@ -36,6 +39,7 @@ export default function Home() {
         twitter={{ cardType: "summary_large_image" }}
       />
 
+      {/* Structured Data */}
       <Head>
         <script
           type="application/ld+json"
@@ -54,11 +58,11 @@ export default function Home() {
       {/* HERO */}
       <LandingHero />
 
-      {/* ABOUT SHORT */}
+      {/* SHORT INTRO */}
       <section className="px-6 pb-4 sm:px-14 md:px-20">
         <div className="mx-auto max-w-7xl">
           <p className="max-w-3xl text-base font-medium leading-relaxed text-zinc-700 dark:text-zinc-300 sm:text-lg">
-            AI/ML Engineer building intelligent systems and automation tools.
+            AI/ML Engineer building intelligent agents, automation systems, and scalable backend solutions.
           </p>
         </div>
       </section>
@@ -67,13 +71,13 @@ export default function Home() {
 
       {/* ABOUT */}
       <AnimatePresence>
-        <FadeUp duration={0.2} whileInView>
+        <FadeUp duration={0.3} whileInView>
           <section className="px-6 py-16 sm:px-14 md:px-20">
             <div className="mx-auto max-w-7xl">
               <h2 className="text-3xl font-bold text-accent">About Me</h2>
 
               <p className="mt-6 text-lg text-zinc-800 dark:text-zinc-300">
-                I build AI agents, automation systems, and scalable backend solutions.
+                I specialize in AI agents, automation systems, and backend development using Python, FastAPI, and LangGraph.
               </p>
             </div>
           </section>
@@ -87,32 +91,23 @@ export default function Home() {
 
       <SectionDivider />
 
-      {/* PROJECTS (🔥 FIXED AREA) */}
-      <ProjectShowcase
-        projects={
-          // SAFE DATA CLEANING (IMPORTANT FIX)
-          PROJECT_SHOWCASE.map((project) => ({
-            ...project,
-            image: {
-              LIGHT:
-                project?.image?.LIGHT ||
-                project?.image ||
-                "/images/fallback.png",
-            },
-          }))
-        }
-      />
+      {/* PROJECTS (🔥 FIXED FINAL) */}
+      <ProjectShowcase projects={PROJECT_SHOWCASE} />
 
       <SectionDivider />
 
       {/* CTA */}
       <AnimatePresence>
-        <FadeUp duration={0.6} whileInView>
+        <FadeUp duration={0.5} whileInView>
           <section className="px-6 py-16 sm:px-14 md:px-20">
             <div className="mx-auto max-w-7xl text-center">
               <h2 className="text-3xl font-bold text-accent">
-                Let’s Build Something
+                Let’s Build Something Amazing
               </h2>
+
+              <p className="mt-4 text-zinc-700 dark:text-zinc-300">
+                Open for AI/ML, automation, and backend projects.
+              </p>
 
               <div className="mt-8 flex justify-center gap-4">
                 <Link
