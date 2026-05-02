@@ -8,8 +8,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     href: "/projects",
     tags: ["TypeScript", "AI Agents", "Automation"],
     image: {
-      LIGHT: "/images/projects/evalyn.png",
-      DARK: "/images/projects/evalyn.png",
+      LIGHT: "/images/projects/evalyn.jpg",
+      DARK: "/images/projects/evalyn.jpg",
     },
   },
   {
@@ -47,7 +47,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Evalyn HR Agent",
-    imageUrl: ["/images/projects/evalyn.png"],
+    imageUrl: ["/images/projects/evalyn.jpg"],
     description:
       "An AI-powered HR assistant built using agent-based architecture to automate recruitment workflows. It analyzes resumes, extracts candidate data, and evaluates applicants efficiently.",
     sourceCodeHref: "https://github.com/Abdullahtanoli001/Evalyn-HR-Agent",
