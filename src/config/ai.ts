@@ -1,4 +1,4 @@
-export const AI_MODEL = "mistralai/mistral-small-3.1-24b-instruct-2503";
+export const AI_MODEL = "llama-3.3-70b-versatile";
 
 export const SYSTEM_PROMPT = `
 You are a personal AI assistant for Abdullah Khan's portfolio website.
