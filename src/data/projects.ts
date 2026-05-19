@@ -4,6 +4,16 @@ import { type ProjectShowcaseListItem } from "@/components/projects/project-show
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
+    title: "AI SDR Agent",
+    href: "/projects",
+    tags: ["Python", "FastAPI", "LangGraph", "AI Agents", "Automation"],
+    image: {
+      LIGHT: "/images/projects/ai-sdr-agent.png",
+      DARK: "/images/projects/ai-sdr-agent.png",
+    },
+  },
+  {
+    index: 1,
     title: "Evalyn HR Agent",
     href: "/projects",
     tags: ["TypeScript", "AI Agents", "Automation"],
@@ -13,7 +23,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     },
   },
   {
-    index: 1,
+    index: 2,
     title: "Phishing Detection Lab",
     href: "/projects",
     tags: ["Python", "LangChain", "LangGraph", "Streamlit"],
@@ -23,7 +33,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     },
   },
   {
-    index: 2,
+    index: 3,
     title: "LangGraph AI Chatbot",
     href: "/projects",
     tags: ["Python", "LangChain", "LangGraph", "RAG"],
@@ -33,7 +43,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     },
   },
   {
-    index: 3,
+    index: 4,
     title: "AI PR Review Agent",
     href: "/projects",
     tags: ["Python", "FastAPI", "Groq LLM", "Slack API"],
@@ -45,6 +55,16 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
+  {
+    name: "AI SDR Agent",
+    imageUrl: ["/images/projects/ai-sdr-agent.png"],
+    description:
+      "AI SDR Agent is a full-stack, AI-powered outbound sales platform that automates the entire SDR workflow — from lead research to personalized email generation, inbox monitoring, reply classification, and intelligent auto-response. Built for teams that want to run scalable, human-quality outbound at zero marginal cost.",
+    sourceCodeHref: "https://github.com/Abdullahtanoli001/Lead-Generation-Agent",
+    liveWebsiteHref: "",
+    category: "AI Agent",
+    technologies: ["Python", "FastAPI", "LangGraph", "AI Agents", "Automation"],
+  },
   {
     name: "Evalyn HR Agent",
     imageUrl: ["/images/projects/evalyn.jpg"],
